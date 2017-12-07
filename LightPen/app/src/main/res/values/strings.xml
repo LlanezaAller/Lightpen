@@ -1,0 +1,134 @@
+<resources>
+    <!-- TODO traducir -->
+
+    <!--Aplicación -->
+    <string name="app_name">LightPen</string>
+    <string name="app_author" translatable="false">Iñigo Llaneza Aller</string>
+    <string name="app_company" translatable="false">Universidad de Oviedo</string>
+    <string name="app_year" translatable="false">2017</string>
+
+    <!--Activity Inicial -->
+    <string name="title_activity_start" translatable="false">LightPen</string>
+    <string name="historyButton_principal">Previous Tests</string>
+    <string name="startTestButton_principal">Analyze</string>
+    <string name="setupButton_principal">Configuration</string>
+    <string name="setupButton_configuracion" translatable="false">Menu</string>
+    <string name="action_settings">Settings</string>
+    <string name="appStartCloseDialogTitle">Are you sure you want to exit?</string>
+    <string name="start_msg_start_seekBar">A higher value will increase the load on the device, be careful</string>
+    <string name="start_msg_valueStablishedOnThreads">It would be used a maximum thread pool of</string>
+    <string name="start_msg_valueStablishedOnURL">It will reach a maximum depth of</string>
+
+    <string name="settings_threadNum">Max number of threads:</string>
+    <string name="settings_urlDeep">Max Depth of Navigation:</string>
+    <string name="settings_language">Language:</string>
+    <string name="settings_spanish">Spanish</string>
+    <string name="settings_english">English</string>
+
+    <!-- Activity ejecución de Test -->
+    <string name="title_activity_run_test">Analyze</string>
+    <string name="title_activity_pentest">LightPen: Pentest</string>
+    <string name="pentestButton_startAnalisis">Start test</string>
+    <string name="pentestTextView_pluginSelect">Select the tests you want to run as well as a valid address:</string>
+    <string name="pentestEditText_address">URL to analyze</string>
+    <string name="pentestButton_validareAddress">Validate address</string>
+    <string name="pentestButton_back">Back</string>
+    <string name="pentestToast_Address_ok">Valid connection test</string>
+
+    <string name="pentestToast_Address_err">Connection Error, please check the address</string>
+    <string name="pentestToast_Address_err_host">Connection error, impossible to solve the host</string>
+    <string name="pentestToast_Address_err_no_internet">Connection error, please check your network</string>
+    <string name="pentestToast_Address_err_timeout">Could not connect to server (timeout)</string>
+
+    <string name="pentestToast_ZeroPlugins_err">You have not selected any plugins</string>
+    <string name="pentestToast_ZeroAddress_err">You have not entered any URL</string>
+
+    <!-- Activity Historial -->
+    <string name="title_activity_history">LightPen: History</string>
+    <string name="history_noResults">No previous results</string>
+    <string name="historyButtonBack">Back</string>
+    <string name="historyLabel_Instructions">Click on a previous test to show it</string>
+
+    <!-- Activity PentestView -->
+
+    <string name="pentestViewCloseDialogTitle">Do you want to save the outcome?</string>
+    <string name="pentestViewCloseDialogMsg">The file can not be recovered</string>
+    <string name="pentestViewDeleteDialogTitle">Do you want to delete the file?</string>
+    <string name="pentestViewDeleteDialogMsg">The file can not be recovered</string>
+
+    <!-- Menu de la activity PentestView -->
+    <string name="pentestViewMenuShare">Share</string>
+    <string name="pentestViewMenuDelete">Delete</string>
+    <string name="pentestViewMenuBack">Back</string>
+    <string name="pentestViewMenuBackNSave">Save and exit</string>
+
+
+    <!-- Dialogos Generales -->
+    <string name="default_No" translatable="false">No</string>
+    <string name="default_Si">Yes</string>
+
+
+    <!-- Zona de Texto para Plugins -->
+    <!-- ######################################### -->
+
+    <!-- Zona para strings basicos de plugins -->
+    <string name="errors_suite_noErrors">No errors found</string>
+    <string name="errors_suite_Description">Description</string>
+    <string name="errors_suite_RiskLevel">Risk Level</string>
+
+    <!-- Plugin RobotScan -->
+    <string name="rs_name" translatable="false">RobotScan</string>
+    <string name="rs_description">Robot.txt\'s analysis</string>
+    <string name="rs_version" translatable="false">0.001</string>
+
+    <string name="rs_vulnerability_admin">Including the /admin/ in your disallow\'s paths you are showing the attackers where can them find the admin\'s login page</string>
+    <string name="rs_vulnerability_infoPhP">Including the folder of info.php you are allowing the attackers to access to critical information</string>
+    <string name="rs_vulnerability_password">The existence of this route can be a security risk</string>
+    <string name="rs_vulnerability_installationFile">The existence of an installation file, allows to extract great amount of data to the attackers</string>
+    <string name="rs_vulnerability_installationPath">The existence of a installation path, allows to extract great amount of data to the attackers in case it contains files</string>
+    <string name="rs_vulnerability_profilesPath">The existence of a profile path can allow the extraction of information about the system configuration</string>
+    <string name="rs_vulnerability_apiPath">La existencia de una ruta de perfiles puede permitir la extracción de información sobre la configuración del sistema</string>
+    <string name="rs_vulnerability_testPath">The existence of a test route may allow exploitation of not tested systems that put this system in high danger</string>
+    <string name="rs_vulnerability_updatePhP">The existence of a file update.php, can bring vulnerabilities in the system when giving information to the attackers</string>
+    <string name="rs_vulnerability_fileNoHtml">The existence of non-html files in the robots file, can give clues about sensitive data to search</string>
+
+    <!-- Plugin HttpHeadScan -->
+    <string name="httphs_name" translatable="false">HTTPHeadScan</string>
+    <string name="httphs_description">Analysis of the domain\'s headers</string>
+    <string name="httphs_version" translatable="false">0.001</string>
+
+    <string name="hhs_policy_X_Content_Type_Options">X-Content-Type-Options: Without this directive, the browser will try to discover the MIME type of the file, which may include malicious files, causing the browser to recognize them</string>
+    <string name="hhs_policy_Strict_Transport_Security">Strict-Transport-Security: Content is not showing on Https</string>
+    <string name="hhs_policy_X_XSS_Protection">X-XSS-Protection: Does not specify the activation of the filter against XSS of the browsers</string>
+    <string name="hhs_policy_X_Frame_Options">X-Frame-Options: In case of not being controlled, page content is vulnerable to click-jacking attacks</string>
+    <string name="hhs_policy_server_info">Server: It should be checked that the information in this field does not match the actual one, as it can give clues. Information Found:</string>
+    <string name="hhs_policy_Referrer_Policy">Referrer-Policy: When not checked, the amount of information in the navigation is not controlled</string>
+    <string name="hhs_policy_Public_Key_Pins">Public-Key-Pins: It should be used, since this way allows the host to send a set of cryptographic prints from the Certification Authority\n</string>
+
+
+    <!-- Plugin HttpMethods -->
+    <string name="httpMths_name" translatable="false">HttpMethodScan</string>
+    <string name="httpMths_description">Analysis of the domain\'s Http methods</string>
+    <string name="httpMths_version" translatable="false">0.001</string>
+    <string name="httphs_method_put">PUT: This method allows an attacker to upload malicious files to the server</string>
+    <string name="httphs_method_delete">DELETE: Delete: This method allows an attacker to delete server files</string>
+    <string name="httphs_method_connect">Connect: This method will allow an attacker to use the server as a proxy</string>
+    <string name="httphs_method_trace">TRACE: This method allows to return as \"echo\", a string that has been sent to the server. This can be used to perform a Cross Site Tracing attack</string>
+    <string name="httphs_method_custom">The use of own methods can be a problem for the system, exploitable by an attacker</string>
+
+    <!-- Plugin URLScan -->
+    <string name="UrlScan_name" translatable="false">UrlScan</string>
+    <string name="UrlScan_description">URL Mapper</string>
+    <string name="UrlScan_version" translatable="false">0.001</string>
+
+    <!-- Plugin PortScan -->
+    <string name="PortScan_name" translatable="false">PortScan</string>
+    <string name="PortScan_description">URL Port Scan</string>
+    <string name="PortScan_version" translatable="false">0.001</string>
+    <string name="PortScan_noPorts">There are not any open ports</string>
+    <string name="title_activity__pentest_view">Analysis Viewer</string>
+
+    <!-- Basic Activity -->
+    <string name="title_activity_basic" translatable="false">none</string>
+
+</resources>

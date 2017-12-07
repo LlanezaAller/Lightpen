@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="tfg.uo.lightpen.activities.ActivityStart">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- Menu de opciones para el Inicio -->
+    <FrameLayout
+        android:id="@+id/fragmentMenuInicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:context=".activities.FragmentStartMenu">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:showIn="@layout/activity_start">
+
+
+            <Button
+                android:id="@+id/pentestStartButton_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="penTestStart"
+                android:text="@string/startTestButton_principal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="205dp"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@android:drawable/ic_menu_view"
+                />
+
+            <Button
+                android:id="@+id/historyButton_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="historyStart"
+                android:text="@string/historyButton_principal"
+                android:layout_below="@+id/pentestStartButton_start"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="27dp"
+                android:layout_alignParentEnd="true"
+                android:drawableLeft="@android:drawable/ic_menu_agenda"/>
+
+            <Button
+                android:id="@+id/setupButton_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="setUp"
+                android:text="@string/setupButton_principal"
+                android:layout_marginBottom="22dp"
+                android:drawableLeft="@android:drawable/ic_menu_manage"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/pentestStart_LabelLightpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="8sp"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                android:typeface="monospace"
+                tools:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/pentestStart_LabelAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_author"
+                android:layout_alignTop="@+id/setupButton_start"
+                android:layout_toEndOf="@+id/setupButton_start"
+                android:layout_marginStart="21dp" />
+
+            <TextView
+                android:id="@+id/pentestStart_LabelCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/pentestStart_LabelAuthor"
+                android:layout_below="@+id/pentestStart_LabelAuthor"
+                android:text="@string/app_company" />
+
+            <TextView
+                android:id="@+id/pentestStart_LabelYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/pentestStart_LabelCompany"
+                android:layout_below="@+id/pentestStart_LabelCompany"
+                android:text="@string/app_year" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+    <!-- Opciones de Configuración de la aplicacion -->
+
+    <FrameLayout
+        android:id="@+id/fragmentMenuOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:showIn="@layout/activity_start">
+
+            <TextView
+                android:id="@+id/setupLabel_urlDeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/settings_urlDeep" />
+
+            <TextView
+                android:id="@+id/setupLabel_ThreadNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/setupButton_save"
+                android:layout_marginTop="54dp"
+                android:text="@string/settings_threadNum" />
+
+            <Button
+                android:id="@+id/setupButton_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="11dp"
+                android:onClick="setUp"
+                android:text="@string/setupButton_configuracion" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/setupSeekBar_UrlDeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/setupLabel_urlDeep"
+                android:layout_marginTop="59dp" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/setupSeekBar_Threads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/setupLabel_ThreadNumber"
+                android:layout_marginTop="40dp" />
+
+            <TextView
+                android:id="@+id/setupLabel_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/setupSeekBar_UrlDeep"
+                android:layout_marginTop="44dp"
+                android:text="@string/settings_language" />
+
+            <Button
+                android:id="@+id/setupButton_Spanish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="29dp"
+                android:layout_marginEnd="17dp"
+                android:layout_toStartOf="@+id/setupButton_English"
+                android:onClick="setSpanish"
+                android:text="@string/settings_spanish" />
+
+            <Button
+                android:id="@+id/setupButton_English"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/setupButton_Spanish"
+                android:layout_alignBottom="@+id/setupButton_Spanish"
+                android:layout_toStartOf="@+id/setupButton_save"
+                android:onClick="setEnglish"
+                android:text="@string/settings_english" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

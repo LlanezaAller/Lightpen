@@ -9,6 +9,9 @@ Instrucciones para la instalación:
     3. Importar apk al dispositivo
     4. Desde el explorador de ficheros del propio dispositivo, ejecutar el apk y dar permisos
 
+# Manuales
+En el siguiente enlace se puede encontrar en formato pdf distintos manuales del sistema para ayuda del lector.
+https://github.com/LlanezaAller/Lightpen/blob/master/documentaci%C3%B3n/Manuales%20del%20sistema.pdf
 
 # Autor
 Iñigo Llaneza Aller

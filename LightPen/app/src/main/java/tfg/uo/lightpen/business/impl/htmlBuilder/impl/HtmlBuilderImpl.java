@@ -93,11 +93,11 @@ public class HtmlBuilderImpl implements HtmlBuilder {
 
             String line = "";
             while ((line = reader.readLine()) != null){
-                if(line.equals("{title}"))
+                if(line.contains("{title}"))
                     body += filename;
-                else if(line.equals("{date}"))
+                else if(line.contains("{date}"))
                     body += date;
-                else if(line.equals("{pentest}"))
+                else if(line.contains("{pentest}"))
                     body += result;
                 else
                     body += line;

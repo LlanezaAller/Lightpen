@@ -9,9 +9,9 @@
     <color name="activity_pentest_listview_plugins">#ececec</color>
     <drawable name="highlight_pressed">#98dff3</drawable>
     <drawable name="highlight_focused">#b9e6f3</drawable>
-    <color name = "pentest_urlOK">#47FA7F</color>
-    <color name = "pentest_urlError">#FA475F</color>
-    <color name = "pentest_urlNew">#FFFF</color>
+    <color name="pentest_urlOK">#47FA7F</color>
+    <color name="pentest_urlError">#FA475F</color>
+    <color name="pentest_urlNew">#FFFF</color>
 
     <!-- Activty History :listview -->
     <color name="activity_history_listview_html">#fafafa</color>

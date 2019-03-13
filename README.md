@@ -1,3 +1,7 @@
+# Old version!!
+
+The new version of this project is hosted here: https://github.com/jose-r-lopez/LightPen
+
 # Lightpen
 Herramienta de análisis preliminar de pentest para android 
 
